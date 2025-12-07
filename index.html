@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyCalc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+                <div>
+                    <h1>Polytech Calculator</h1>
+                    <p class="subtitle">good luck with that</p>
+                </div>
+            </div>
+        </header>
+        
+        <div class="modules-container">
+
+
+            <!-- Modules WITHOUT TP -->
+            <div class="module-category">
+                <h3>Modules Without TP</h3>
+                <div class="category-description">
+                    Test: 40% | Exam: 60%
+                </div>
+                
+                <div class="module-grid">
+
+
+                    <div class="module-row">
+                        <div class="module-name">Analysis (4)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="analysis-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="analysis-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="analysis-result">-</div>
+                    </div>
+                    
+\                    <div class="module-row">
+                        <div class="module-name">RM (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="rm-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="rm-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="rm-result">-</div>
+                    </div>
+                    
+
+                    <div class="module-row">
+                        <div class="module-name">English 1 (1)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="english-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="english-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="english-result">-</div>
+                    </div>
+                    
+                    <div class="module-row">
+                        <div class="module-name">French 1 (1)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="french-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="french-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="french-result">-</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modules WITH TP -->
+            <div class="module-category">
+                <h3>Modules With TP</h3>
+                <div class="category-description">
+                    Test: 20% | TP: 30% | Exam: 50%
+                </div>
+                
+                <div class="module-grid">
+                    <div class="module-row with-tp">
+                        <div class="module-name">Num-Ana (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="num-ana-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="num-ana-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="num-ana-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="num-ana-result">-</div>
+                    </div>
+                    
+                    <div class="module-row with-tp">
+                        <div class="module-name">Physics (4)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="physics-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="physics-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="physics-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="physics-result">-</div>
+                    </div>
+                    
+                    <div class="module-row with-tp">
+                        <div class="module-name">Chemistry (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="chemistry-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="chemistry-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="chemistry-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="chemistry-result">-</div>
+                    </div>
+                    
+                    <div class="module-row with-tp">
+                        <div class="module-name">Electricity (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="electricity-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="electricity-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="electricity-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="electricity-result">-</div>
+                    </div>
+                    
+                    <div class="module-row with-tp">
+                        <div class="module-name">FM (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="fm-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="fm-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="fm-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="fm-result">-</div>
+                    </div>
+                    
+                    <div class="module-row with-tp">
+                        <div class="module-name">CS (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="cs-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="cs-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="cs-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="cs-result">-</div>
+                    </div>
+                    
+                    <div class="module-row with-tp">
+                        <div class="module-name">Engineering (3)</div>
+                        <div class="input-group">
+                            <label>Test</label>
+                            <input type="number" id="engineering-test" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>TP</label>
+                            <input type="number" id="engineering-tp" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Exam</label>
+                            <input type="number" id="engineering-exam" min="0" max="20" step="0.1" placeholder="0">
+                        </div>
+                        <div class="module-result" id="engineering-result">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <div class="overall-average">
+                <h3>Final Result</h3>
+                <div class="overall-score" id="overall-average">-</div>
+            </div>
+        
+        <div class="buttons">
+            <button id="calculate-btn" class="btn btn-primary">
+                Calculate
+            <button id="reset-btn" class="btn btn-secondary">
+                Reset All
+            </button>
+        </div>
+        
+        <footer>
+            <p>Polytech Calculator - Rofia</p>
+        </footer>
+    </div>
+
+    <!-- Floating controls: theme bubble and back-to-top button -->
+    <button id="theme-bubble" class="theme-bubble" aria-label="Toggle theme">🌙</button>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">⬆</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
