@@ -17,14 +17,14 @@ function validateInput(input) {
         
         // to calculate grade for modules without TP
         function calculateWithoutTP(test, exam) {
-            if (test === '' || exam === '') return null;
+            if (test === 0 || exam === 0) return null;
             const result = (test * 0.4) + (exam * 0.6);
             return Math.min(result, 20);
         }
         
         // to calculate grade for modules with TP
         function calculateWithTP(test, tp, exam) {
-            if (test === '' || tp === '' || exam === '') return null;
+            if (test === 0 || tp === 0 || exam === 0) return null;
             const result = (test * 0.2) + (tp * 0.3) + (exam * 0.5);
             return Math.min(result, 20);
         }

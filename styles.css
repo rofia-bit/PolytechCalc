@@ -188,6 +188,7 @@
         }
         
         .results-section {
+            display: none !important;
             background-color: var(--light-navy);
             border-radius: 8px;
             padding: 30px;
