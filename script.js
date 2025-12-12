@@ -375,6 +375,8 @@ function validateInput(input) {
                 updateBackToTop();
             }
 
+
+            
             document.addEventListener('DOMContentLoaded', restoreTheme);
         })();
     
