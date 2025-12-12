@@ -33,7 +33,7 @@ function validateInput(input) {
             return num !== null ? num.toFixed(2) : '-';
         }
 
-                // --- Persistence (localStorage) ---
+
                 const STORAGE_KEY = 'polytechcalc-inputs';
 
                 function isLocalStorageAvailable() {
@@ -261,7 +261,7 @@ function validateInput(input) {
 
         
 
-        // --- Additional persistence hooks (non-invasive) ---
+
         (function() {
             let saveTimeout = null;
             document.addEventListener('input', function(e) {
@@ -273,11 +273,11 @@ function validateInput(input) {
                 }
             });
 
-            // ensure calculate button also persists after calculation
+
             const calcBtn = document.getElementById('calculate-btn');
             if (calcBtn) {
                 calcBtn.addEventListener('click', function() {
-                    // calculation runs first (existing listener); then we persist
+
                     setTimeout(saveInputsToStorage, 50);
                 });
             }
@@ -372,11 +372,9 @@ function validateInput(input) {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
                 window.addEventListener('scroll', updateBackToTop);
-                // initial state
                 updateBackToTop();
             }
 
-            // restore theme once DOM is ready
             document.addEventListener('DOMContentLoaded', restoreTheme);
         })();
     
